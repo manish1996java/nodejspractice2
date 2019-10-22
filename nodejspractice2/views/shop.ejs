@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/shop">shop</a></li>
+                    <li><a href="/admin/add-product">add-product</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <%if(products.length > 0){%>
+                    <% for(let product of products){%>
+                        <h2><%=product.title%></h2>
+                    <%}%>   
+            <%}else{%>
+                <h2>No product found</h2>
+            <%}%>
+        </main>
+</body>
+</html>
